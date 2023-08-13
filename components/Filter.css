@@ -1,0 +1,26 @@
+.filter__bar {
+    background-color: white;
+    box-shadow: 3px 3px 3px #333;
+    height: 60px;
+    max-width: 810px;
+    margin: -30px auto 0px auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+.filter__bar p {
+    margin-right: 10px;
+    font-weight: 600;
+    color: #464d4d;
+}
+.filter__bar .tag {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+a.tag.clear {
+    background-color: #333;
+    color: white;
+    margin-left: auto;
+    margin-right: 30px;
+}

@@ -1,0 +1,76 @@
+.job__listing.featured {
+    border-left: 5px solid #5da4a4;
+}
+.job__listing {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 15px auto;
+    padding: 15px 30px;
+    box-shadow: 2px 2px 5px #333;
+    border-radius: 5px;
+    border-left: 5px solid transparent;
+}
+.company__avatar {
+    margin-right: 25px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.job__listing:hover {
+    box-shadow: 4px 4px 7px #333;
+    border-left: 5px solid #5da4a4;
+    cursor: pointer;
+}
+.job__details {
+    display: flex;
+    flex-direction: column;
+}
+.location {
+    display: flex;
+    margin-top: 5px;
+}
+.job__details p {
+    margin-right: 6px;
+    font-size: 13px;
+    color: #848e8d;
+}
+.author {
+    display: flex;
+    align-items: center;
+}
+.tags__nf {
+    display: flex;
+    margin-left: 8px;
+}
+.tags__nf .tag {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+.tag {
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+.tag.tag__new {
+    background-color: #5fa2a4;
+}
+.tag.tag__featured {
+    background-color: #464d4d;
+}
+.company__name {
+    font-size: 13px;
+    color: #5da4a4;
+}
+p.job__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #464d4d;
+    margin-top: 5px;
+}
+.job__tags {
+    margin-right: 0px;
+    margin-left: auto;
+}
