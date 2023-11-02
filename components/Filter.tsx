@@ -1,21 +1,23 @@
 import './Filter.css'
 
-export default function Filter(props){
+export default function Filter() {
     const filter = (p) => {
         let jobs = document.querySelectorAll(".job__listing");
         jobs.forEach(function(item){
             item.classList.remove('active')
             item.classList.remove('hidden')
         })
-        let filteredJobs = [];
+        
         let target = p.target.classList[1]
-        let selected = document.querySelectorAll('[data-languages]');
-        for(var i=0; i<selected.length; i++){
-            let stringy = selected[i].dataset.languages
-            if(stringy.includes(target)){
-                filteredJobs.push(selected[i])
-            }
-        }        
+        let selected = Array.from(document.querySelectorAll('[data-languages]'));
+        let filteredJobs = selected.filter((select)=>select.dataset.languages.includes(target))
+        console.log(filteredJobs)
+        // for(var i=0; i<selected.length; i++){
+        //     let stringy = selected[i].dataset.languages
+        //     if(stringy.includes(target)){
+        //         filteredJobs.push(selected[i])
+        //     }
+        // }        
         for (let i = 0; i < jobs.length; i++) {
             jobs[i].classList.add("hidden");
         }
@@ -32,16 +34,18 @@ export default function Filter(props){
         }, 400)
     }
 
-    const clear = (p)=>{
+    const clear = () => {
         let jobs = document.querySelectorAll(".job__listing");
-        jobs.forEach(function(item){
-            item.style.display='flex'
-            setTimeout(()=>{item.classList.remove('active')
-            item.classList.remove('hidden')}, 400)
+        jobs.forEach(function (item) {
+            item.style.display = 'flex'
+            setTimeout(() => {
+                item.classList.remove('active')
+                item.classList.remove('hidden')
+            }, 400)
         })
     }
 
-    return(
+    return (
         <div className="filter__bar">
             <p>Filter by tech:</p>
             <div className="tag__filter">
